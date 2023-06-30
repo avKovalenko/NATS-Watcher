@@ -1,0 +1,72 @@
+﻿<mah:MetroWindow x:Class="NATSWatcher.views.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                 mc:Ignorable="d"
+                 Title="NATS Watcher" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="4" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TreeView>
+            <TreeViewItem Header="Group A">
+                <TreeViewItem Header="Srv1 [127.0.0.1:4566]" />
+                <TreeViewItem Header="Srv2 [127.0.0.1:4566]" />
+                <TreeViewItem Header="Srv3 [127.0.0.1:4566]" />
+                <TreeViewItem Header="Sub Group B">
+                    <TreeViewItem Header="Srv4 [127.0.0.1:4566]" />
+                    <TreeViewItem Header="Srv5 [127.0.0.1:4566]" />
+                    <TreeViewItem Header="Srv6 [127.0.0.1:4566]" />
+                </TreeViewItem>
+            </TreeViewItem>
+
+        </TreeView>
+
+        <StatusBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <StatusBarItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Серввер:" />
+                    <TextBlock Text="127,0,0,1" />
+                </StackPanel>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{StaticResource MahApps.Styles.Button.Flat}">
+                        <Button.Content>
+                            <iconPacks:PackIconMaterial Kind="ServerPlus" />
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
+
+        <GridSplitter Grid.Column="1" Grid.Row="0" />
+
+
+
+        <Grid Grid.Row="0" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            
+
+        </Grid>
+    </Grid>
+</mah:MetroWindow>
